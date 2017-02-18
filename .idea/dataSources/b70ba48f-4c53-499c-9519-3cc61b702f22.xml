@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="test.db">
+  <database-model serializer="dbm" rdbms="SQLITE" format-version="4.0">
+    <root id="1"/>
+    <schema id="2" parent="1">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <table id="3" parent="2" name="object_templates"/>
+    <table id="4" parent="2" name="sqlite_sequence"/>
+    <column id="5" parent="3" name="id">
+      <DataType>INTEGER(0,-1)|4</DataType>
+    </column>
+    <column id="6" parent="3" name="created_at">
+      <Position>1</Position>
+      <DataType>DATETIME(0,-1)|12</DataType>
+    </column>
+    <column id="7" parent="3" name="updated_at">
+      <Position>2</Position>
+      <DataType>DATETIME(0,-1)|12</DataType>
+    </column>
+    <column id="8" parent="3" name="deleted_at">
+      <Position>3</Position>
+      <DataType>DATETIME(0,-1)|12</DataType>
+    </column>
+    <column id="9" parent="3" name="key">
+      <Position>4</Position>
+      <DataType>VARCHAR(255)(0,-1)|12</DataType>
+    </column>
+    <column id="10" parent="3" name="name">
+      <Position>5</Position>
+      <DataType>VARCHAR(255)(0,-1)|12</DataType>
+    </column>
+    <column id="11" parent="3" name="data">
+      <Position>6</Position>
+      <DataType>BLOB(0,-1)|12</DataType>
+    </column>
+    <index id="12" parent="3" name="idx_object_templates_deleted_at">
+      <ColNames>deleted_at</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="13" parent="3">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="14" parent="4" name="name">
+      <DataType>(0,-1)|12</DataType>
+    </column>
+    <column id="15" parent="4" name="seq">
+      <Position>1</Position>
+      <DataType>(0,-1)|12</DataType>
+    </column>
+  </database-model>
+</dataSource>

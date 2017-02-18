@@ -1,0 +1,31 @@
+name: Room 1
+
+components:
+- type: '*mud/core/content/world.Room'
+- type: '*mud/core/content/world.Text'
+  data:
+    nodes:
+      description:
+        value: It's a room with a bunch of stuff
+        style: ---------------------------------
+        constraints: {}
+    styles:
+      '-': normal
+
+objects:
+	- name: Fixture.Statue
+		components:
+		- type: '*mud/core/content/world.VisibleObjectMarker'
+		- type: '*mud/core/content/world.Text'
+			data:
+				nodes:
+					name:
+						value: a statue
+						style: ________
+						constraints: {}
+					description:
+						value: a large statue of a dog
+						style: -----------------------
+						constraints: {}
+				styles:
+				  '-': normal

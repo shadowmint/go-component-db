@@ -1,0 +1,33 @@
+{
+  "name": "go-component-db",
+  "version": "0.0.1",
+  "description": "Database backend for object storage",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shadowmint/go-component-db.git"
+  },
+  "files": [
+    "index.js",
+    "scripts",
+    "src"
+  ],
+  "author": "douglas.linder@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/shadowmint/go-component-db/issues"
+  },
+  "homepage": "https://github.com/shadowmint/go-component-db",
+  "scripts": {
+    "test-setup": "go get github.com/mattn/go-sqlite3",
+    "test": "go test -v ./src/ntoolkit/...",
+    "postinstall": "node scripts/postinstall.js"
+  },
+  "dependencies": {
+    "go-assert": "github:shadowmint/go-assert",
+    "go-component": "github:shadowmint/go-component",
+    "go-errors": "github:shadowmint/go-errors",
+    "mkdirp": "^0.5.1",
+    "ncp": "^2.0.0"
+  }
+}

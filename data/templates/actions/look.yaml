@@ -1,0 +1,21 @@
+name: "*mud/actions.LookHandler"
+template: |
+	{{- $data := . -}}
+
+	{{- /* Room description */ -}}
+	{{- textnode "room" "description" $data -}}
+
+	{{- /* Objects description */ -}}
+	{{- "\n" -}}
+	{{- $objects := strings -}}
+	{{- range $index, $element := .Data.Players -}}
+		{{- $playerId := (print "player." $element.Id) -}}
+		{{- $playerName := textnode $playerId "name" $data -}}
+		{{- $objects := append $objects $playerName -}}
+	{{- end -}}
+	{{- range $index, $element := .Data.Objects -}}
+		{{- $objectId := (print "object." $element.Id) -}}
+		{{- $objectName := textnode $objectId "name" $data -}}
+		{{- $objects := append $objects $objectName -}}
+	{{- end -}}
+	{{- areHere $objects | capital -}}

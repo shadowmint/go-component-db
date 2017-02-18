@@ -1,0 +1,13 @@
+name: Player
+
+components:
+- type: '*mud/core/content/world.Player'
+- type: '*mud/core/content/world.Text'
+  data:
+    nodes:
+      description:
+        value: A person
+        style: --------
+        constraints: {}
+    styles:
+      '-': normal
